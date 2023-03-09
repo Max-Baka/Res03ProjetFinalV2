@@ -4,7 +4,6 @@
   * Création de compte
   * Création de panier avec ajout et suppression de produits
   * Choix des pièces informatiques
-  * Choix du montage matériel/OS
   * Contacter la boutique Pour la création d'un site internet
   
 # ADMIN:
