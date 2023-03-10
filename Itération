@@ -1,0 +1,15 @@
+                          Iteration #1
+          Période de l'itération : du 06/03/2023 au 10/03/2023
+
+          ====================================================
+                                  Résumé
+          ====================================================
+Au cours de cette itération, j'ai accompli les tâches suivantes:
+
+Structure de dossiers : création des dossiers relatifs à une structure MVC.
+Créer les templates : création des différents templates contenant un <h1> simple.
+La base donnée à été crée.
+Le routeur est en bientôt fini
+J'ai rencontré des difficultés avec les tâches suivantes :
+
+Routing : difficultés pour définir la méthode checkRoute()
