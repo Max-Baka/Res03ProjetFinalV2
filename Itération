@@ -13,3 +13,21 @@ Le routeur est en bientôt fini
 J'ai rencontré des difficultés avec les tâches suivantes :
 
 Routing : difficultés pour définir la méthode checkRoute()
+
+                            Iteration #2
+          Période de l'itération : du 13/03/2023 au 17/03/2023
+          
+          ====================================================
+                                  Résumé
+          ====================================================
+          
+ Au cours de cette itération, j'ai accompli les tâches suivantes:
+ 
+ Création d'un routeur (catégorie, produit, utilisateur) et d'une authentification (creation de compte et login)
+ le tout bien relié à la base de donnée.
+ J'ai commencé à creer les routes pour l'ajout, modification ainsi que la suppression de categorie et produits 
+ 
+ 
+Pour la semaine prochaine:
+
+Le but de la semaine prochaine sera de finir la création des routes et d'incorporer l'ajout, modification ainsi que la suppression de categorie et produits 
