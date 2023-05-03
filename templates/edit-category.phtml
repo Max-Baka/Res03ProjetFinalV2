@@ -1,0 +1,18 @@
+<section id="edit-c">
+      <header>
+          <h3>Modifier une catégorie</h3>
+      </header>
+       
+            
+    <form action="/Res03ProjetFinalV2/check-modifier-categorie/<?= $data["categorie"]->getSlug(); ?>" method="post">
+      <label for="id">ID</label>
+            <input type="text" name="id" id="id" readonly value="<?= $data["categorie"]->getId(); ?>">
+      <label for="name">Nom de la catégorie :</label>
+            <input type="text" name="name" id="name" required value="<?= $data["categorie"]->getName(); ?>">
+      <label for="description">Description :</label>
+            <textarea name="description" id="description" value="<?= $data["categorie"]->getDescription(); ?>"><?= $data["categorie"]->getDescription(); ?></textarea>
+      <footer>
+            <input type="submit" value="Modifier la catégorie">
+      </footer>
+    </form>
+</section>

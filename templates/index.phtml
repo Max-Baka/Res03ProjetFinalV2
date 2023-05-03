@@ -1,0 +1,25 @@
+<main id="main-carrou">
+<section id="carrou">
+    <h2 class="sr-only">E-TechMax, tout pour votre config</h2>
+</section>
+<section id="cate-yep">  
+    <h2>Nos catégories de Pièces</h2> 
+    <ul>
+        
+        <?php
+        foreach ($data['categories'] as $category)
+        { ?>
+        <li class="mama ">
+        <article>
+        <h3><?= $category->getName() ?></h3> 
+         <p>  
+                 <?= $category->getDescription() ?>  
+         </p>  
+         <a href="/Res03ProjetFinalV2/categories/<?= $category->getSlug() ?>">Nos <?= $category->getSlug() ?></a>
+        </article>
+        </li>
+        <?php }?>
+    </ul>
+        
+</section>
+</main>

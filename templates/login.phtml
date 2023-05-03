@@ -1,0 +1,43 @@
+<main id="co">  
+    <h2>Connexion</h2>  
+    <form method="post" action="/Res03ProjetFinalV2/check-connexion" class="coco">  
+        <input type="hidden" name="formName" id="formName" value="loginForm" class="connex">  
+        <fieldset id="fieldco">  
+            <label for="email-log">  
+                Email  
+            </label>  
+            <input type="email" name="email" id="email-log" class="connex" required>  
+            <label for="password">  
+                Mot de passe  
+            </label>  
+            <input type="password" name="password" id="password-log" class="connex" required>  
+        </fieldset>  
+        <button type="submit" class="button-glitch1">Se Connecter
+        </button>  
+    </form>
+    <h2 class="">Créer un compte</h2>  
+    <form method="post" action="/Res03ProjetFinalV2/check-creer-un-compte" class="creco">  
+        <input type="hidden" name="form-name" id="form-name" value="registerForm" class="registre">  
+        <fieldset id="fieldreg">  
+            <label for="username">  
+                Nom d'utilisateur  
+            </label>  
+            <input type="text" name="username" id="username" class="registre" required>
+            <label for="email">  
+                Email  
+            </label>  
+            <input type="email" name="email" id="email" class="registre" required>
+            <label for="password">  
+                Mot de passe 
+            </label>  
+            <input type="password" name="password" id="password" class="registre" required>
+            
+            <label for="confirm-password">  
+                Confirmez le mot de passe 
+            </label>  
+            <input type="password" name="confirm-password" id="confirm-password" class="registre">
+            
+        </fieldset>  
+        <button type="submit" class="button-glitch2">Créer un compte</button>
+    </form>
+    </main>

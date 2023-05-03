@@ -1,0 +1,22 @@
+<h3>Gestion des Utilisateurs</h3>
+<table id = "usersTable" class="table table-striped col-lg-6 table-bordered table-striped text-center">
+                 <tr>
+                  <th>id </th>
+                  <th>Identifiant </th>
+                  <th>Email </th>
+                  <th>Supprimer</th>
+                 </tr>
+                 <?php 
+                 foreach($data["users"]as $user){
+
+                     echo "<tr>";
+                            echo "<td  scope='row'>".$user->getId()."</td>";
+                            echo "<td>".$user->getUsername()."</td>";
+                            echo "<td>".$user->getEmail()."</td>";
+                            echo "<td> <a href='/Res03ProjetFinalV2/delete-utilisateur/".$user->getId()."'>Supprimer</a></td>";
+
+                     echo "</tr>";
+
+                 }
+                 ?>
+</table>

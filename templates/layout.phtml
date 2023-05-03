@@ -1,0 +1,45 @@
+<!DOCTYPE html>  
+<html lang="fr">  
+    <head>  
+        <meta charset="utf-8">  
+        <meta name="viewport" content="width=device-width, initial-scale=1">  
+        <title>E-techMax</title>  
+        <meta name="author" content="Maxime Langlois">
+        <meta name="keywords" content="Ordinateur, tech, commerce, gaming, site-web">
+        <meta name="description" content="Site e-commerce tech">
+        <meta name="og:title" content="E-Tech-Max">
+        <meta property="og:image" content="https://ih1.redbubble.net/image.1424702995.4421/fposter,small,wall_texture,product,750x1000.jpg">
+        <meta property="og:type" content="article">
+        <meta property="og:site_name" content="E-tech-Max">
+        <meta property="og:locale" content="fr_FR">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/Res03ProjetFinalV2/assets/styles/css/style.css">
+    </head>  
+    <body id="body-yep">
+        
+        <?php
+        if(isset($_SESSION)&&isset($_SESSION["user"])&& !empty($_SESSION["user"])){
+            
+            require "templates/header-connected.phtml";
+        }
+        else{
+            require "templates/header.phtml";
+        }
+        ?>
+        
+        <?php require "templates/{$page}.phtml"; ?>
+        
+        <footer id="last-yep">  
+            <ul>
+              <li><a href="mentions-legales.html">Mentions légales</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="https://www.facebook.com/">Facebook</a></li>
+              <li><a href="https://www.instagram.com/">Instagram</a></li>
+              <li><a href="https://www.linkedin.com/">LinkedIn</a></li>
+            </ul>
+        </footer>  
+    </body>
+    <script src="/Res03ProjetFinalV2/assets/styles/js/carroussel.js"></script>
+</html>

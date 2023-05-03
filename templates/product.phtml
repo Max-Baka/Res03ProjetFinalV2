@@ -1,0 +1,26 @@
+<main id="main-product">
+<article id="product">
+            <h2 class="sr-only">Détail du Produit</h2>
+            <header>
+               <?php 
+               foreach($data['categories'] as $categorie){
+                 echo $categorie->getName()." ";  
+               }
+               ?>
+               <h3>
+                  <?= $data['product']->getName() ?>
+            </h3>
+             </header>
+        <p>  
+            <?= $data['product']->getDescription() ?> 
+        </p>
+            <p>  
+                <?= $data['product']->getPrice() ?> €  
+            </p> 
+            </footer>
+            <figure>
+                <img src="/Res03ProjetFinalV2/<?= $data['product']->getMedia(); ?>" alt="détail du Produit">
+            </figure>
+        </footer> 
+</article>
+</main>

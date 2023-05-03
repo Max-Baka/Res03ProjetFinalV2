@@ -1,0 +1,470 @@
+$darkGrey :  #151522;
+$lightPurple : #3eabf4;
+$mediumPurple: #5591f5;
+$darkPurple: #855df7;
+$black : #000000;
+$white : #ffffff;
+    
+  
+
+#body-yep{
+      background-color: grey;
+      font-family: 'Source Sans Pro', sans-serif;
+      color: $white;
+      margin: 0;
+      min-height: 80vh;
+
+
+      
+  #yep-head{
+      height: 10vh;
+
+      background-color: $black;
+      color: $white;
+	    padding: 1rem;
+	    font-weight:300;
+      text-transform:uppercase;
+      font-size: 1.1rem; 
+      
+      
+	nav { 
+      display: flex;
+	   align-items:center;
+
+		h1{
+		display: none;
+		}
+		a{
+
+		      img{
+		           
+		            border-radius: 10px;
+		            height: 10vh;
+		      }
+		}
+		ul{
+		      display: flex;
+		      list-style: none;
+
+		      
+		      li{
+		            margin-left: 2vw;
+		            a{
+		                 text-decoration: none;
+		                 color: $white;
+		                 &:hover{
+		                   color: $mediumPurple;
+		                 }
+		            }
+		      }
+		}
+	}
+}
+	#nav-admin{
+		nav{
+			ul{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			display: flex;
+				li{
+				margin-right: 20px;
+					a{
+					display: block;
+					color: #fff;
+					text-decoration: none;
+					padding: 10px;	
+					}
+				}
+				li:last-child {
+  				margin-right: 0;
+			}
+		}
+	}
+	}
+	
+	#main-carrou{
+	  		grid-template-rows : 50vh 30vh;
+  #carrou{
+    font-family: 'Source Sans Pro', sans-serif;
+    background-image: url("/Res03ProjetFinalV2/assets/styles/images/carrousel-1.png");
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:contain;
+    h2{
+      font-family: 'Poppins';
+      font-weight: 600;
+      display: none;
+    }
+  }
+  #cate-yep{
+  	
+  	h2{
+  		display: none;
+  	}
+  ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    padding: 0 20px;
+    
+    li{
+    	&:first-of-type{
+    	  article {
+    	    border: 1px solid $lightPurple;
+    	    
+    	    h3 {
+    	      color:$lightPurple;
+    	    }
+    	  }
+    	   
+      	  a{
+      	    
+              color: $white;
+              padding: 0.5rem 1rem;
+              text-transform:uppercase;
+      	  }
+            
+      }
+        &:nth-of-type(2){
+          article {
+    	    border: 1px solid $mediumPurple;
+    	    
+    	    h3 {
+    	      color:$mediumPurple;
+    	    }
+    	  }
+          a{
+        
+            color: $white;
+            padding: 0.5rem 1rem;
+            text-transform:uppercase;
+          }
+        }
+        &:last-of-type{
+          article {
+    	    border: 1px solid $darkPurple;
+    	    
+    	    h3 {
+    	      color: $darkPurple;
+    	    }
+    	  }
+          a{
+            
+            color: $white;
+            padding: 0.5rem 1rem;
+            text-transform:uppercase;
+          }
+      }
+    }
+  
+  .mama {
+   article{
+      border: 1px solid #ccc;
+      padding: 20px;
+      min-height: 230px;
+      text-align: center;
+        
+        
+      h3 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+      }
+      
+      p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+        min-height: 3rem;
+      }
+      
+      a {
+        font-size: 1rem;
+        text-decoration: none; 
+        
+        
+    }
+  }
+  }
+  }
+  }
+  @media (max-width: 768px) {
+    ul {
+      grid-template-columns: 1fr;
+    
+    
+    h2 {
+				display: none;
+    }
+  }
+}
+	}
+	
+  #main-categoyep{
+    
+    article{
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-family : "Poppins";
+    font-weight: 600;
+    font-size: 1.8rem;
+    
+    h3{
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 600;
+      }
+    }
+  }
+	#co{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+   padding: 0 4rem;
+  
+  h2 {
+    display: none;
+  }
+  
+  form {
+    background-color: #ffffff24;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    margin-top: 2em;
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+    
+    input{
+      display: block;
+      width: 90%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      transition: transform 0.5s ease;
+       &:hover,
+        &:focus {
+          border-color: #333;
+          transform: scale(1.02);
+        }
+    }
+    
+    button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.2s ease-in-out;
+      
+      &:hover {
+        background-color: $darkPurple;
+      }
+    }
+  }
+  .coco{
+    height: 37vh;
+  #fieldco{
+    border: 1px solid $lightPurple;
+    margin-bottom: 2rem;
+  }
+  .button-glitch1{
+    background-color: $lightPurple;
+  }
+  }
+  .creco{
+    height: 60vh;
+  #fieldreg{
+    border : 1px solid $mediumPurple;
+    margin-bottom: 2rem;
+  }
+  .button-glitch2{
+    background-color:$mediumPurple;
+  }
+}
+}
+	#main-article-list{
+  font-size : 1.5rem;
+  font-family: 'Poppins';
+  h2 {
+    display: none;
+  }
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
+    padding-top: 2em;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 1em;
+
+a{
+	text-decoration: none;
+	color:#1b11c8fa;;
+  article {
+    transition: transform 0.3s ease-out;
+    &:hover {
+      transform: scale(1.05);
+      
+    }
+	
+    header {
+      margin-bottom: 10px;
+      h3 {
+        font-size: 1.2rem;
+        margin: 0;
+        color: $white;
+        &:hover {
+      color: $lightPurple;
+      
+    }
+      }
+    }
+
+    figure {
+      margin: 0;
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+  
+  @media (max-width: 767px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+	#main-product{
+	  padding: 0 20px;
+  padding-bottom: 5em;
+	#product {
+  
+  h2{
+  	display: none;
+  }
+
+
+  @media (max-width: 768px) {
+    margin: 0 auto;
+  }
+
+  h3 {
+    text-align: center;
+    font-size: 5rem ;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    color: $lightPurple;
+    &:hover {
+      color: blue;
+      
+    }
+  }
+
+  p {
+    text-align: center;
+    font-size: 2rem ;
+      
+  }
+  p:last-of-type{
+    color: $darkPurple;
+  }
+
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+
+    @media (min-width: 768px) {
+      margin-top: 40px;
+    }
+  }
+
+  img {
+    max-width: 50%;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+  }
+
+  button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+	}
+
+
+	#last-yep{
+	background-color: $black;
+	color: $white;
+	padding: 0;
+	height: 7vh;
+	width: 100%;
+	font-weight: 300;
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		display: flex;
+		justify-content: center;
+		padding: 2vh;
+		li {
+			margin: 0 10px;
+			a {
+				color: $white;
+				text-decoration: none;
+				padding: 10px;
+			
+			&:hover {
+				color: $mediumPurple;
+				border-radius: 4px;
+			}
+			}
+		}
+	}
+}
+}
+
+#body-yep main #cate-yep ul .mama article h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-family : "Poppins";
+    font-weight: 600;
+    font-size: 1.8rem;
+}
+#body-yep main #cate-yep ul .mama article a:last-of-type {
+    
+    color: #ffffff;
+}
+main{
+		min-height: 80vh;
+		background-color: $darkGrey;
+		color: white;
+		display: grid;
+
+		padding-bottom:5rem;
+}
+#body-yep #yep-head nav {
+    display: flex;
+    align-items: center;
+    max-width: 90vw;
+    justify-content: space-between;
+}

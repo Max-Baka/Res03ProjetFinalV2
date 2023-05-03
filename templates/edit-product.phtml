@@ -1,0 +1,26 @@
+<?php var_dump($data) ?>
+<section id="edit-p">
+      <header>
+          <h2>Modifier un produit</h2>
+      </header>
+       
+            
+    <form action="/Res03ProjetFinalV2/check-modifier-produit/<?= $data["edit-product"]->getSlug(); ?>" method="post" >
+      <label for="id">ID</label>
+            <input type="text" name="id" id="id" readonly value="<?= $data["edit-product"]->getId(); ?>">
+      <label for="name">Nom du produit :</label>
+            <input type="text" name="name" id="name" required value="<?= $data["edit-product"]->getName(); ?>">
+      <label for="description">Description :</label>
+            <textarea name="description" id="description"><?= $data["edit-product"]->getDescription(); ?></textarea>
+      <label for="price">Prix</label>
+            <input type="text" name="price" id="price" required value="<?= $data["edit-product"]->getPrice(); ?>">  
+      </label>
+      <label for="media">Media</label>
+            <input type="file" name="image" />  
+      </label>
+      
+            <input type="submit" value="Modifier le produit">
+       
+            
+    </form>
+</section>

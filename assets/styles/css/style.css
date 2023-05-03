@@ -1,0 +1,386 @@
+#body-yep {
+  background-color: grey;
+  font-family: "Source Sans Pro", sans-serif;
+  color: #ffffff;
+  margin: 0;
+  min-height: 80vh;
+}
+#body-yep #yep-head {
+  height: 10vh;
+  background-color: #000000;
+  color: #ffffff;
+  padding: 1rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+}
+#body-yep #yep-head nav {
+  display: flex;
+  align-items: center;
+}
+#body-yep #yep-head nav h1 {
+  display: none;
+}
+#body-yep #yep-head nav a img {
+  border-radius: 10px;
+  height: 10vh;
+}
+#body-yep #yep-head nav ul {
+  display: flex;
+  list-style: none;
+}
+#body-yep #yep-head nav ul li {
+  margin-left: 2vw;
+}
+#body-yep #yep-head nav ul li a {
+  text-decoration: none;
+  color: #ffffff;
+}
+#body-yep #yep-head nav ul li a:hover {
+  color: #5591f5;
+}
+#body-yep #nav-admin nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+#body-yep #nav-admin nav ul li {
+  margin-right: 20px;
+}
+#body-yep #nav-admin nav ul li a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+}
+#body-yep #nav-admin nav ul li:last-child {
+  margin-right: 0;
+}
+#body-yep #main-carrou {
+  grid-template-rows: 50vh 30vh;
+}
+#body-yep #main-carrou #carrou {
+  font-family: "Source Sans Pro", sans-serif;
+  background-image: url("/Res03ProjetFinalV2/assets/styles/images/carrousel-1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#body-yep #main-carrou #carrou h2 {
+  font-family: "Poppins";
+  font-weight: 600;
+  display: none;
+}
+#body-yep #main-carrou #cate-yep h2 {
+  display: none;
+}
+#body-yep #main-carrou #cate-yep ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  padding: 0 20px;
+}
+#body-yep #main-carrou #cate-yep ul li:first-of-type article {
+  border: 1px solid #3eabf4;
+}
+#body-yep #main-carrou #cate-yep ul li:first-of-type article h3 {
+  color: #3eabf4;
+}
+#body-yep #main-carrou #cate-yep ul li:first-of-type a {
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+}
+#body-yep #main-carrou #cate-yep ul li:nth-of-type(2) article {
+  border: 1px solid #5591f5;
+}
+#body-yep #main-carrou #cate-yep ul li:nth-of-type(2) article h3 {
+  color: #5591f5;
+}
+#body-yep #main-carrou #cate-yep ul li:nth-of-type(2) a {
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+}
+#body-yep #main-carrou #cate-yep ul li:last-of-type article {
+  border: 1px solid #855df7;
+}
+#body-yep #main-carrou #cate-yep ul li:last-of-type article h3 {
+  color: #855df7;
+}
+#body-yep #main-carrou #cate-yep ul li:last-of-type a {
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+}
+#body-yep #main-carrou #cate-yep ul .mama article {
+  border: 1px solid #ccc;
+  padding: 20px;
+  min-height: 230px;
+  text-align: center;
+}
+#body-yep #main-carrou #cate-yep ul .mama article h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+#body-yep #main-carrou #cate-yep ul .mama article p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  min-height: 3rem;
+}
+#body-yep #main-carrou #cate-yep ul .mama article a {
+  font-size: 1rem;
+  text-decoration: none;
+}
+@media (max-width: 768px) {
+  #body-yep #main-carrou ul {
+    grid-template-columns: 1fr;
+  }
+  #body-yep #main-carrou ul h2 {
+    display: none;
+  }
+}
+#body-yep #main-categoyep article {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+#body-yep #main-categoyep article h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+#body-yep #co {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+  padding: 0 4rem;
+}
+#body-yep #co h2 {
+  display: none;
+}
+#body-yep #co form {
+  background-color: rgba(255, 255, 255, 0.1411764706);
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  margin-top: 2em;
+}
+#body-yep #co form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+#body-yep #co form input {
+  display: block;
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  transition: transform 0.5s ease;
+}
+#body-yep #co form input:hover, #body-yep #co form input:focus {
+  border-color: #333;
+  transform: scale(1.02);
+}
+#body-yep #co form button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+#body-yep #co form button:hover {
+  background-color: #855df7;
+}
+#body-yep #co .coco {
+  height: 37vh;
+}
+#body-yep #co .coco #fieldco {
+  border: 1px solid #3eabf4;
+  margin-bottom: 2rem;
+}
+#body-yep #co .coco .button-glitch1 {
+  background-color: #3eabf4;
+}
+#body-yep #co .creco {
+  height: 60vh;
+}
+#body-yep #co .creco #fieldreg {
+  border: 1px solid #5591f5;
+  margin-bottom: 2rem;
+}
+#body-yep #co .creco .button-glitch2 {
+  background-color: #5591f5;
+}
+#body-yep #main-article-list {
+  font-size: 1.5rem;
+  font-family: "Poppins";
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
+  padding-top: 2em;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 1em;
+}
+#body-yep #main-article-list h2 {
+  display: none;
+}
+#body-yep #main-article-list a {
+  text-decoration: none;
+  color: rgba(27, 17, 200, 0.9803921569);
+}
+#body-yep #main-article-list a article {
+  transition: transform 0.3s ease-out;
+}
+#body-yep #main-article-list a article:hover {
+  transform: scale(1.05);
+}
+#body-yep #main-article-list a article header {
+  margin-bottom: 10px;
+}
+#body-yep #main-article-list a article header h3 {
+  font-size: 1.2rem;
+  margin: 0;
+  color: #ffffff;
+}
+#body-yep #main-article-list a article header h3:hover {
+  color: #3eabf4;
+}
+#body-yep #main-article-list a article figure {
+  margin: 0;
+}
+#body-yep #main-article-list a article figure img {
+  max-width: 100%;
+  height: auto;
+}
+@media (max-width: 767px) {
+  #body-yep #main-article-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+#body-yep #main-product {
+  padding: 0 20px;
+  padding-bottom: 5em;
+}
+#body-yep #main-product #product h2 {
+  display: none;
+}
+@media (max-width: 768px) {
+  #body-yep #main-product #product {
+    margin: 0 auto;
+  }
+}
+#body-yep #main-product #product h3 {
+  text-align: center;
+  font-size: 5rem;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+  color: #3eabf4;
+}
+#body-yep #main-product #product h3:hover {
+  color: blue;
+}
+#body-yep #main-product #product p {
+  text-align: center;
+  font-size: 2rem;
+}
+#body-yep #main-product #product p:last-of-type {
+  color: #855df7;
+}
+#body-yep #main-product #product footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+@media (min-width: 768px) {
+  #body-yep #main-product #product footer {
+    margin-top: 40px;
+  }
+}
+#body-yep #main-product #product img {
+  max-width: 50%;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+#body-yep #main-product #product button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+#body-yep #last-yep {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 0;
+  height: 7vh;
+  width: 100%;
+  font-weight: 300;
+}
+#body-yep #last-yep ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  padding: 2vh;
+}
+#body-yep #last-yep ul li {
+  margin: 0 10px;
+}
+#body-yep #last-yep ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px;
+}
+#body-yep #last-yep ul li a:hover {
+  color: #5591f5;
+  border-radius: 4px;
+}
+
+#body-yep main #cate-yep ul .mama article h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+
+#body-yep main #cate-yep ul .mama article a:last-of-type {
+  color: #ffffff;
+}
+
+main {
+  min-height: 80vh;
+  background-color: #151522;
+  color: white;
+  display: grid;
+  padding-bottom: 5rem;
+}
+
+#body-yep #yep-head nav {
+  display: flex;
+  align-items: center;
+  max-width: 90vw;
+  justify-content: space-between;
+}
+
+/*# sourceMappingURL=style.css.map */

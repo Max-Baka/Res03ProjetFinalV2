@@ -1,0 +1,28 @@
+<h3>Gestion des Categories</h3>
+<table>
+    <?php echo " <a href='/Res03ProjetFinalV2/creer-categorie'><button>Créer une Categorie</button></a>"; ?>
+              <thead>
+                 <tr>
+                  <th>id </th>
+                  <th>name </th>
+                  <th>slug </th>
+                  <th>description</th>
+                  <th>Detail </th>
+                  <th>Modifier </th>
+                  <th>Supprimer </th>
+                 </tr>
+                 </thead>
+                 <tbody>
+              <?php   foreach($data["categories"] as $category){ ?>
+                          <td><?php echo $category->getId() ?></td>
+                           <td><?php echo $category->getName() ?></td> 
+                           <td><?php echo $category->getSlug() ?></td> 
+                           <td><?php echo $category->getDescription() ?></td> 
+                           <td> <a href='/Res03ProjetFinalV2/admin-categories'><?php echo $category->getSlug(); ?></a></td>
+                          <td> <a href='/Res03ProjetFinalV2/modifier-categorie/<?php  echo $category->getSlug(); ?>'>Modifier</a></td>
+                          <td> <a href='/Res03ProjetFinalV2/supprimer-categorie/<?php echo $category->getSlug(); ?>'>Supprimer</a></td>
+                     </tr>
+
+            <?php    } ?>
+                 </tbody>
+</table>

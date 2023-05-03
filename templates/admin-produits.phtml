@@ -1,0 +1,39 @@
+<h3>Gestion des Produits</h3>
+<table>
+
+    <?php echo " <a href='/Res03ProjetFinalV2/creer-produit'><button>Créer un Produit</button></a>"; ?>
+              <thead>
+            <tr>
+               <th>id </th>
+               <th>name </th>
+               <th>slug </th>
+               <th>description</th>
+               <th>price</th>
+               <th>media</th>
+               <th>categorie</th>
+               <th>Detail </th>
+               <th>Modifier </th>
+               <th>Supprimer </th>
+            </tr>
+                 </thead>
+                 <tbody>
+                
+              <?php  foreach($data as $product){ ?>
+ 
+                  <tr>
+                          <td scope='row'>  <?php echo $product->getId(); ?></td>
+                           <td><?php echo $product->getName(); ?></td> 
+                           <td><?php echo $product->getSlug(); ?></td> 
+                           <td><?php echo $product->getDescription(); ?></td> 
+                            <td><?php echo $product->getPrice(); ?></td> 
+                             <td><?php echo $product->getMedia(); ?></td> 
+                             <td><?php echo $product->getCategorieId(); ?></td>
+                           <td> <a href='/Res03ProjetFinalV2/admin-produits'><?php echo $product->getSlug(); ?></a></td>
+                          <td> <a href='/Res03ProjetFinalV2/modifier-produit/<?php  echo $product->getSlug(); ?>'>Modifier</a></td>
+                          <td> <a href='/Res03ProjetFinalV2/supprimer-produit/<?php echo $product->getSlug(); ?>'>Supprimer</a></td>
+                  </tr>
+
+            <?php    } ?>
+
+                 </tbody>
+</table>

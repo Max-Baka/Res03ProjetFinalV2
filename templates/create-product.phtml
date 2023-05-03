@@ -1,0 +1,27 @@
+<section>
+
+          <h2>Ajouter un Produit</h1>
+            
+    <form action="/Res03ProjetFinalV2/check-creer-produit" method="post" enctype="multipart/form-data">
+      <label for="name">Nom du produit :</label>
+            <input type="text" name="name" id="name" required>
+      <label for="description">Description :</label>
+            <textarea name="description" id="description"></textarea>
+      <label for="price">Prix</label>
+            <input type="text" name="price" id="price" required>
+            <input type="file" name="image" />
+            <input type="hidden" name="formName" value="fileUpload" />
+      <label for="categories">Choisissez la catégorie</label>
+            <select name="categories" id="categorie">
+                <option value="">--Faite votre choix--</option>
+               
+            <?php foreach($data[0] as $categorie){ ?>
+            
+             <option value="<?=$categorie->getId(); ?>"><?= $categorie->getName(); ?></option>
+            <?php  } ?>
+            </select>
+      <footer>
+            <input type="submit" value="Ajouter le produit">
+      </footer>
+    </form>
+</section>

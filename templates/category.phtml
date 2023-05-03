@@ -1,0 +1,23 @@
+<main id="main-categoyep"> 
+    <h2>Les produits de la catégorie <?= $data['category'] ?></h2> 
+  
+            <?php 
+            foreach ($data['products'] as $product)
+            { ?>  
+        <article>
+            <header>  
+                <h3><?= $product->getName() ?></h3>  
+            </header>  
+            <p>  
+                <?= $product->getDescription() ?>  
+            </p>  
+            <figure>
+                <img src="/Res03ProjetFinalV2/<?= $product->getMedia(); ?>" alt="photo de l'image en présentation">
+            </figure>
+            <footer>  
+                <a href="/Res03ProjetFinalV2/produits/<?= $product->getSlug() ?>"><?= $product->getName() ?></a>  
+            </footer>  
+        </article>  
+        <?php } ?>
+</main>  
+
