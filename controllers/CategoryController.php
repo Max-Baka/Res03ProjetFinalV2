@@ -13,7 +13,7 @@ class CategoryController extends AbstractController {
     
     public function categoriesList() : void  
     {  
-       $categories = $this->cm->getAllCategories();  // à remplacer par un appel au manager pour récupérer la liste des catégories  
+       $categories = $this->cm->getAllCategories();  
       
         $this->render("index", [  
             "categories" => $categories  
@@ -40,7 +40,7 @@ class CategoryController extends AbstractController {
     {   
         
         $tab = [];
-        $category = new Category($post["name"],$this->slugify($post["name"]),$post["description"]);
+        $category = new Category($this->clean($post["name"]),$this->slugify($post["name"]),$this->clean($post["description"]));
         $newcateg = $this->cm->createCategory($category);
         
          header('Location: creer-categorie');
@@ -60,7 +60,7 @@ class CategoryController extends AbstractController {
     {
         
         
-        $editCategory =  new Category($post["name"],$this->slugify($post["name"]),$post["description"]);
+        $editCategory =  new Category($this->clean($post["name"]),$this->slugify($post["name"]),$this->clean($post["description"]));
         $editCategory->setId($post["id"]);
         $category = $this->cm->editCategory($editCategory);
           header('Location: /Res03ProjetFinalV2/admin-categories');
@@ -73,7 +73,7 @@ class CategoryController extends AbstractController {
     }
     public function categoriesListAdmin() : void  
     {  
-       $categories = $this->cm->getAllCategories();  // à remplacer par un appel au manager pour récupérer la liste des catégories  
+       $categories = $this->cm->getAllCategories();  
       
         $this->renderAdmin("admin-categories", [  
             "categories" => $categories  

@@ -15,7 +15,12 @@ abstract class AbstractController
         $page = $template;  
   
         require "templates/admin-layout.phtml";  
-    } 
+    }
+    protected function clean(string $unsafe) : string
+    {
+          $safe = htmlspecialchars($unsafe);
+          return $safe;
+    }
     public function __construct()  
     {  
     $this->pm = new ProductManager();  

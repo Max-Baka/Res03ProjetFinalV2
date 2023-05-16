@@ -31,6 +31,7 @@ class ProductController extends AbstractController{
             "categories" => $categories
         ]);  
     }
+    
     public function createProduct() : void
     {   
        $categories = $this->cm->getAllCategories();
@@ -46,7 +47,7 @@ class ProductController extends AbstractController{
         $post["media"]= $media->getUrl();
         var_dump($post);
         $tab = [];
-        $product = new Product($post["name"],$this->slugify($post["name"]),$post["description"], intval($post["price"]), $post["media"], $post["categories"]);
+        $product = new Product($this->clean($post["name"]),$this->slugify($post["name"]),$this->clean($post["description"]), intval($this->clean($post["price"])), $post["media"], $post["categories"]);
         $newprod = $this->pm->createProduct($product);
         
         header('Location: creer-produit');
@@ -65,7 +66,7 @@ class ProductController extends AbstractController{
     public function checkEditProduct(array $post, string $productSlug) : void
     {
         var_dump($post);
-        $editProduct =  new Product($post["name"],$this->slugify($post["name"]),$post["description"], $post["price"], $post["image"]);
+        $editProduct =  new Product($this->clean($post["name"]),$this->slugify($post["name"]),$this->clean($post["description"]), $this->clean($post["price"]), $post["image"]);
         $editProduct = $this->pm->getProductById($post["id"]);
         $editProduct->setName($post["name"]);
         $editProduct->setDescription($post["description"]);

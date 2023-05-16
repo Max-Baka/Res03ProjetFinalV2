@@ -46,9 +46,11 @@ class ProductManager extends AbstractManager {
         $product->setId($productParams["id"]);
         return $product;  
     }
+    
     public function createProduct(Product $product) : Product
     {
-        $query = $this->db->prepare('INSERT INTO products VALUES (null, :name, :slug, :description, :price, :media, :categorie_id)');
+        $query = $this->db->prepare('INSERT INTO products VALUES (null, :name, :slug, :description, :price,
+        :media, :categorie_id)');
         $parameters = [
         'name' => $product->getName(),
         'slug' => $product->getSlug(),
@@ -64,7 +66,8 @@ class ProductManager extends AbstractManager {
     }
     public function editProduct(Product $product) : Product
     {
-        $query = $this->db->prepare('UPDATE products SET name= :name, slug= :slug, description= :description, price= :price, media= :media, categorie_id= :categorie_id WHERE id= :id');
+        $query = $this->db->prepare('UPDATE products SET name= :name, slug= :slug, description= :description,
+        price= :price, media= :media, categorie_id= :categorie_id WHERE id= :id');
         $parameters = [
         'id' => $product->getId(),
         'name' => $product->getName(),

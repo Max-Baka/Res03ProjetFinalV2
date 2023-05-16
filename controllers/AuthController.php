@@ -25,9 +25,9 @@ class AuthController extends AbstractController {
         &&($post["password"] === ($post["confirm-password"]))
         ){// vérifier que le formulaire a été soumis
         
-        $username = $post['username'];
-        $email = $post['email'];   // récupérer les champs du formulaire  
-        $password = $post['password'];
+        $username = $this->clean($post['username']);
+        $email = $this->clean($post['email']);   // récupérer les champs du formulaire  
+        $password = $this->clean($post['password']);
         $role = "customer"; 
         $password_hash = password_hash($password, PASSWORD_DEFAULT);    // chiffrer le mot de passe    
         $exist = $this->um->getUserByEmail($post['email']);
@@ -42,7 +42,7 @@ class AuthController extends AbstractController {
         }
     }  
     } 
-    /* Pour la page de connexion */  
+    /* Pour la connexion */  
     public function login() : void  
     {  
       $this->render("login", []);  // render la page avec le formulaire de connexion  
@@ -56,8 +56,8 @@ class AuthController extends AbstractController {
        &&isset($post["email"])&& !empty($post["email"])
        &&isset($post["password"])&& !empty($post["password"])
        ){ // vérifier que le formulaire a été soumis  
-            $email = $post['email'];   // récupérer les champs du formulaire  
-            $password = $post['password'];
+            $email = $this->clean($post['email']);   // récupérer les champs du formulaire  
+            $password = $this->clean($post['password']);
             $user = $this->um->getUserByEmail($email); // si il existe, vérifier son mot de passe    
 
             if ($user)
@@ -67,7 +67,10 @@ class AuthController extends AbstractController {
                     $_SESSION["role"] = $user->getRole();
                     
                     if($_SESSION["role"] === "admin"){
-                        header('Location: /Res03ProjetFinalV2/admin-utilisateurs'); // si il est bon, connecter l'utilisateur  
+                        header('Location: /Res03ProjetFinalV2/admin-utilisateurs'); // si il est bon, connecter l'admin  
+                    }
+                    else{
+                        header('Location: /Res03ProjetFinalV2/'); // reparé, apres la depose du site 
                     }
                 }
                 else{
